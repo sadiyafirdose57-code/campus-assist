@@ -1,0 +1,17 @@
+{
+  "name": "campus-assist",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI college assistant chatbot: answers student doubts from official college documents.",
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "install:all": "npm install",
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "seed": "npm run seed -w backend",
+    "build": "npm run build -w frontend",
+    "test": "npm test -w backend"
+  },
+  "devDependencies": { "concurrently": "^8.2.2" },
+  "engines": { "node": ">=20" },
+  "license": "MIT"
+}
